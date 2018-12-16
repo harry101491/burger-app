@@ -3,7 +3,9 @@ import React, { Component } from "react";
 // Importing styles
 import styles from "./App.css";
 
+// components
 import Layout from "./components/Layout/Layout";
+import BurgerBuilder from "./containers/BurgerBuilder/BurgerBuilder";
 
 class App extends Component {
 
@@ -17,7 +19,7 @@ class App extends Component {
     return(
       <div className={styles.App}>
         <Layout>
-          <p>Inside the Layout!</p>
+          <BurgerBuilder />
         </Layout>
       </div>
     );
