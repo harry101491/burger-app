@@ -80,6 +80,21 @@ class BurgerBuilder extends Component {
     };
 
     /**
+     * modal closing handler
+     */
+    closeModalHandler = () => {
+        this.setState({ purchasing: false });
+    };
+
+    /**
+     * handler for the continuing the 
+     *  method
+     */
+    continueModalHandler = () => {
+        alert("You Continue!!");
+    };
+
+    /**
      * Removing the ingredient with given type
      */
     removeIngredientHandler = (type) => {
@@ -118,8 +133,12 @@ class BurgerBuilder extends Component {
 
         return(
             <Aux>
-                <Modal show={ this.state.purchasing } >
-                    <OrderSummary ingredients={ this.state.ingredients } />
+                <Modal show={ this.state.purchasing } modalClosed={ this.closeModalHandler } >
+                    <OrderSummary 
+                        ingredients={ this.state.ingredients } 
+                        canceled={ this.closeModalHandler }
+                        continued={ this.continueModalHandler } 
+                    />
                 </Modal>
                 <Burger ingredients={ this.state.ingredients } />
                 <BuildControls 
