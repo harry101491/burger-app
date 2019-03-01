@@ -2,5 +2,5 @@
     display: flex;
     justify-content: center;
     flex-flow: column;
-    margin-top: 10px;
+    margin-top: 72px; /* the margin top should add the height of the header so (56 + 16) */
 }

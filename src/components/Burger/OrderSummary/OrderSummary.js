@@ -24,6 +24,7 @@ const orderSummary = (props) => {
             <ul>
                 { ingredientList }
             </ul>
+            <p>Total Price: { props.price.toFixed(2) }</p>
             <p>
                 Continue to Checkout?
             </p>
