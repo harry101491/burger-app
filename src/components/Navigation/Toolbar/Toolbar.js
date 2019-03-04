@@ -11,7 +11,7 @@ const toolbar = (props) => {
             <div>MENU</div>
             <Logo />
             <nav>
-                <NavigationalItems />
+                <NavigationalItems active/>
             </nav>
         </header>
     );
