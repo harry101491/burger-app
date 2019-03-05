@@ -3,15 +3,17 @@ import React from "react";
 import styles from "./Toolbar.css";
 import Logo from "../../Logo/Logo";
 
-import NavigationalItems from "./NavigationalItems/NavigationalItems";
+import NavigationalItems from "../NavigationalItems/NavigationalItems";
 
 const toolbar = (props) => {
     return (
         <header className={ styles.Toolbar }>
             <div>MENU</div>
-            <Logo />
-            <nav>
-                <NavigationalItems active/>
+            <div className={ styles.Logo }>
+                <Logo />
+            </div>
+            <nav className={ styles.DisplayMobile }>
+                <NavigationalItems />
             </nav>
         </header>
     );
